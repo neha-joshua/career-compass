@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(timeout 12 node index.js)",
+      "Bash(node index.js)",
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"admin@careercompass.com\",\"password\":\"admin123\"}')",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const p=JSON.parse\\(d\\); console.log\\('Login OK, role:', p.user?.role, 'token:', p.token?.slice\\(0,20\\)+'...'\\)\")",
+      "Bash(curl -s http://localhost:5000/api/careers)",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const a=JSON.parse\\(d\\); console.log\\('Careers count:', a.length, '| First:', a[0]?.name\\)\")",
+      "Bash(node -e \"process.stdin.resume\\(\\);let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{try{const a=JSON.parse\\(d\\);console.log\\('Careers:',a.length,'| First:',a[0]?.name,'| Field:',a[0]?.field\\)}catch\\(e\\){console.log\\(d.slice\\(0,200\\)\\)}}\\)\")",
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/login -H \"Content-Type: application/json\" -d \"{\\\\\"email\\\\\":\\\\\"student@test.com\\\\\",\\\\\"password\\\\\":\\\\\"test123\\\\\"}\")",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(curl -s http://localhost:5173)"
+    ]
+  }
+}
