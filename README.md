@@ -249,5 +249,9 @@ Compared to typical student projects and even commercial Indian career guidance 
 - Added gap mini-indicator on every CareerCard
 
 ---
+## Author
+Neha Joshua
 
-*Built with React + Express + SQLite · Designed for academic presentation · CareerCompass 2024*
+*Built with React + Express + SQLite · Designed for academic presentation*
+
+
